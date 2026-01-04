@@ -54,12 +54,12 @@ jobs:
             </b>
           </b>"
 
-          sed -i "/<!-- NEWS-START -->/a $SNIPPET" path/to/your/index.html
+          sed -i "/<!-- NEWS-START -->/a $SNIPPET" index.html
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add path/to/your/index.html
+          git add index.html
           git commit -m "Add news: $TITLE ($YEAR)"
           git push
