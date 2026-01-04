@@ -19,11 +19,11 @@ jobs:
       - name: Extract issue content
         id: extract
         run: |
-          echo "CAT=$(echo "$BODY" | grep -A 1 '### Category' | tail -n 1)" >> $GITHUB_ENV
-          echo "YEAR=$(echo "$BODY" | grep -A 1 '### Year' | tail -n 1)" >> $GITHUB_ENV
-          echo "TITLE=$(echo "$BODY" | grep -A 1 '### Title' | tail -n 1)" >> $GITHUB_ENV
-          echo "URL=$(echo "$BODY" | grep -A 1 '### URL' | tail -n 1)" >> $GITHUB_ENV
-          echo "SOURCE=$(echo "$BODY" | grep -A 1 '### Source' | tail -n 1)" >> $GITHUB_ENV
+          echo "CAT=$(echo "$BODY" | grep -A 2 '### Category' | tail -n 1)" >> $GITHUB_ENV
+          echo "YEAR=$(echo "$BODY" | grep -A 2 '### Year' | tail -n 1)" >> $GITHUB_ENV
+          echo "TITLE=$(echo "$BODY" | grep -A 2 '### Title' | tail -n 1)" >> $GITHUB_ENV
+          echo "URL=$(echo "$BODY" | grep -A 1 '### URL' | tail -n 2)" >> $GITHUB_ENV
+          echo "SOURCE=$(echo "$BODY" | grep -A 1 '### Source' | tail -n 2)" >> $GITHUB_ENV
 
       - name: Add news snippet
         run: |
