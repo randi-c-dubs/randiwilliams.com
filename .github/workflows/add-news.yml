@@ -53,7 +53,7 @@ jobs:
               <\/span>
             <\/b>
           <\/b>"
-
+          echo $SNIPPET
           sed -i "/<!-- NEWS-START -->/a $SNIPPET" index.html
 
       - name: Commit and push changes
