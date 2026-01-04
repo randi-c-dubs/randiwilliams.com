@@ -48,3 +48,10 @@ jobs:
           git add index.html
           git commit -m "Add news: $TITLE ($YEAR)"
           git push
+
+      - name: Comment and close issue
+        uses: peter-evans/close-issue@v2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment: |
+            The new item has been added to the Press section
