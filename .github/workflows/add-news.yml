@@ -21,11 +21,11 @@ jobs:
         run: |
           BODY="${{ github.event.issue.body }}"
       
-          echo "CAT=$(echo "$BODY" | grep -A 1 '### Category' | tail -n 1)" >> $GITHUB_ENV
-          echo "YEAR=$(echo "$BODY" | grep -A 1 '### Year' | tail -n 1)" >> $GITHUB_ENV
-          echo "TITLE=$(echo "$BODY" | grep -A 1 '### Title' | tail -n 1)" >> $GITHUB_ENV
-          echo "URL=$(echo "$BODY" | grep -A 1 '### URL' | tail -n 1)" >> $GITHUB_ENV
-          echo "SOURCE=$(echo "$BODY" | grep -A 1 '### Source' | tail -n 1)" >> $GITHUB_ENV
+          echo "CAT=$(echo "$BODY" | grep -A 2 '### Category' | tail -n 1)" >> $GITHUB_ENV
+          echo "YEAR=$(echo "$BODY" | grep -A 2 '### Year' | tail -n 1)" >> $GITHUB_ENV
+          echo "TITLE=$(echo "$BODY" | grep -A 2 '### Title' | tail -n 1)" >> $GITHUB_ENV
+          echo "URL=$(echo "$BODY" | grep -A 2 '### URL' | tail -n 1)" >> $GITHUB_ENV
+          echo "SOURCE=$(echo "$BODY" | grep -A 2 '### Source' | tail -n 1)" >> $GITHUB_ENV
 
       - name: Add news snippet
         run: |
