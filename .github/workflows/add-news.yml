@@ -19,11 +19,11 @@ jobs:
       - name: Extract issue content
         id: extract
         run: |
+          echo "CAT=$(echo "$BODY" | grep -A 1 '### Category' | tail -n 1)" >> $GITHUB_ENV
           echo "YEAR=$(echo "$BODY" | grep -A 1 '### Year' | tail -n 1)" >> $GITHUB_ENV
           echo "TITLE=$(echo "$BODY" | grep -A 1 '### Title' | tail -n 1)" >> $GITHUB_ENV
           echo "URL=$(echo "$BODY" | grep -A 1 '### URL' | tail -n 1)" >> $GITHUB_ENV
           echo "SOURCE=$(echo "$BODY" | grep -A 1 '### Source' | tail -n 1)" >> $GITHUB_ENV
-          echo "CAT=$(echo "$BODY" | grep -A 1 '### Category' | tail -n 1)" >> $GITHUB_ENV
 
       - name: Add news snippet
         run: |
@@ -32,7 +32,7 @@ jobs:
             Video)   ICON="images/711245.png" ;;
             Audio)   ICON="images/7422028.png" ;;
             Article) ICON="images/60492.png" ;;
-            *)       ICON="images/60492.png" ;;
+            *)       ICON="fail" ;;
           esac
 
           SNIPPET="<b>
