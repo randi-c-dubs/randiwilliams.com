@@ -19,6 +19,8 @@ jobs:
       - name: Extract issue content
         id: extract
         run: |
+          BODY="${{ github.event.issue.body }}"
+      
           echo "CAT=$(echo "$BODY" | grep -A 2 '### Category' | tail -n 1)" >> $GITHUB_ENV
           echo "YEAR=$(echo "$BODY" | grep -A 2 '### Year' | tail -n 1)" >> $GITHUB_ENV
           echo "TITLE=$(echo "$BODY" | grep -A 2 '### Title' | tail -n 1)" >> $GITHUB_ENV
