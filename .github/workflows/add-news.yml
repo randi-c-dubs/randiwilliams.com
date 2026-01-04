@@ -23,7 +23,11 @@ jobs:
           echo "YEAR=$(echo "$BODY" | grep -A 2 '### Year' | tail -n 1)" >> $GITHUB_ENV
           echo "TITLE=$(echo "$BODY" | grep -A 2 '### Title' | tail -n 1)" >> $GITHUB_ENV
           echo "URL=$(echo "$BODY" | grep -A 1 '### URL' | tail -n 2)" >> $GITHUB_ENV
-          echo "SOURCE=$(echo "$BODY" | grep -A 1 '### Source' | tail -n 2)" >> $GITHUB_ENV
+          echo "SOURCE=$(echo "$BODY" | grep -A 1 '### Source' | tail -n 1)" >> $GITHUB_ENV
+
+          echo $CAT
+          echo $URL
+          echo $SOURCE
 
       - name: Add news snippet
         run: |
