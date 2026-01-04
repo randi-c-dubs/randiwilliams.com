@@ -1,0 +1,45 @@
+name: Add News Item
+description: Add a new news link to the website
+title: "Add News: [Title Here]"
+labels: ["news"]
+body:
+  - type: dropdown
+    id: cat
+    attributes:
+      label: Category
+      description: What type of feature is this?
+      options:
+        - Video
+        - Audio
+        - Article
+        - Award
+    validations:
+      required: true
+  - type: input
+    id: year
+    attributes:
+      label: Year
+      placeholder: "2025"
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: "Tea Tune with Randi Williams"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: "https://example.com"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      placeholder: "EdWeek"
+    validations:
+      required: true
