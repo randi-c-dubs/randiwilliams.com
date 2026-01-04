@@ -21,16 +21,11 @@ jobs:
         run: |
           BODY="${{ github.event.issue.body }}"
       
-          echo "CAT=$(echo "$BODY" | grep -A 2 '### Category' | tail -n 1)" >> $GITHUB_ENV
-          echo "YEAR=$(echo "$BODY" | grep -A 2 '### Year' | tail -n 1)" >> $GITHUB_ENV
-          echo "TITLE=$(echo "$BODY" | grep -A 2 '### Title' | tail -n 1)" >> $GITHUB_ENV
-          echo "URL=$(echo "$BODY" | grep -A 1 '### URL' | tail -n 2)" >> $GITHUB_ENV
+          echo "CAT=$(echo "$BODY" | grep -A 1 '### Category' | tail -n 1)" >> $GITHUB_ENV
+          echo "YEAR=$(echo "$BODY" | grep -A 1 '### Year' | tail -n 1)" >> $GITHUB_ENV
+          echo "TITLE=$(echo "$BODY" | grep -A 1 '### Title' | tail -n 1)" >> $GITHUB_ENV
+          echo "URL=$(echo "$BODY" | grep -A 1 '### URL' | tail -n 1)" >> $GITHUB_ENV
           echo "SOURCE=$(echo "$BODY" | grep -A 1 '### Source' | tail -n 1)" >> $GITHUB_ENV
-
-          echo $BODY
-          echo $CAT
-          echo $URL
-          echo $SOURCE
 
       - name: Add news snippet
         run: |
@@ -39,7 +34,7 @@ jobs:
             Video)   ICON="images/711245.png" ;;
             Audio)   ICON="images/7422028.png" ;;
             Article) ICON="images/60492.png" ;;
-            *)       ICON="fail" ;;
+            *)       ICON="error getting url" ;;
           esac
 
           SNIPPET="<b>
