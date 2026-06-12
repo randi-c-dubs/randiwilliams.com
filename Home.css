@@ -1,4 +1,4 @@
- .u-section-1 {
+#d3 .u-section-1 {
   min-height: 708px;
 }
 
@@ -52,7 +52,7 @@
 
 .u-section-1 .u-text-3 {
   font-size: 1.125rem;
-  margin: 143px 0 0 62px;
+  margin: 143px 0 0 0;
 }
 
 .u-section-1 .u-image-1 {
@@ -68,6 +68,54 @@
 
 .u-section-1 .u-container-layout-4 {
   padding: 30px;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: solid;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: none;
+  margin: 58px auto 0;
+  padding: 18px 46px 20px 45px;
+}
+
+.u-section-1 .connect-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.u-section-1 .connect-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 18px 26px;
+}
+
+.u-section-1 .connect-button .connect-icon {
+  display: inline-flex;
+  min-width: 1rem;
+  height: 1rem;
+}
+
+.u-section-1 .connect-button--red {
+  background-color: #d32f2f !important;
+  color: #fff;
+}
+
+.u-section-1 .connect-button--red:hover {
+  background-color: #b71c1c;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .connect-buttons {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -96,7 +144,6 @@
 
   .u-section-1 .u-text-3 {
     width: auto;
-    margin-left: 184px;
   }
 
   .u-section-1 .u-image-1 {
@@ -132,10 +179,6 @@
     font-size: 3.75rem;
   }
 
-  .u-section-1 .u-text-3 {
-    margin-left: 121px;
-  }
-
   .u-section-1 .u-image-1 {
     min-height: 644px;
   }
@@ -163,10 +206,6 @@
     width: 554px;
     margin-top: -60px;
     margin-left: auto;
-  }
-
-  .u-section-1 .u-text-3 {
-    margin-left: 294px;
   }
 
   .u-section-1 .u-image-1 {
@@ -198,10 +237,6 @@
 
   .u-section-1 .u-text-1 {
     font-size: 3rem;
-  }
-
-  .u-section-1 .u-text-3 {
-    margin-left: 80px;
   }
 
   .u-section-1 .u-image-1 {
@@ -254,7 +289,7 @@
 .u-section-2 .u-social-icons-1 {
   height: 25px;
   min-height: 16px;
-  width: 99px;
+  width: 132px;
   min-width: 72px;
   margin: 47px auto 0;
 }
@@ -390,6 +425,24 @@
   font-weight: 700;
   text-transform: uppercase;
   margin: 50px auto 0;
+}
+
+.u-section-3 .featured-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.65rem;
+}
+
+.u-section-3 .featured-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 96px;
+  height: 4px;
+  background-color: #c5b2ec;
+  border-radius: 999px;
 }
 
 .u-section-3 .u-image-1 {
