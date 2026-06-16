@@ -66,6 +66,17 @@
   --animation-custom_in-scale: 1;
 }
 
+.u-section-1 .u-image-1c {
+  min-height: 708px;
+  background-image: url("images/connect_profile.png");
+  background-position: 50% 50%;
+  --animation-custom_in-translate_x: 300px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+}
+
 .u-section-1 .u-container-layout-4 {
   padding: 30px;
 }
@@ -149,6 +160,10 @@
   .u-section-1 .u-image-1 {
     min-height: 705px;
   }
+
+  .u-section-1 .u-image-1c {
+    min-height: 705px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -182,6 +197,10 @@
   .u-section-1 .u-image-1 {
     min-height: 644px;
   }
+
+  .u-section-1 .u-image-1c {
+    min-height: 644px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -209,6 +228,10 @@
   }
 
   .u-section-1 .u-image-1 {
+    min-height: 1073px;
+  }
+
+  .u-section-1 .u-image-1c {
     min-height: 1073px;
   }
 
@@ -240,6 +263,10 @@
   }
 
   .u-section-1 .u-image-1 {
+    min-height: 676px;
+  }
+
+  .u-section-1 .u-image-1c {
     min-height: 676px;
   }
 }.u-section-2 .u-sheet-1 {
@@ -1988,7 +2015,7 @@
 
 .u-section-7 .u-text-3 {
   font-size: 1.25rem;
-  margin: 21px 11px 0;
+  margin: 21px 21px 0;
 }
 
 .u-section-7 .u-btn-1 {
@@ -2029,7 +2056,7 @@
 
 .u-section-7 .u-text-6 {
   font-size: 1.25rem;
-  margin: 21px 11px 0;
+  margin: 21px 21px 0;
 }
 
 .u-section-7 .u-btn-2 {
@@ -2070,7 +2097,7 @@
 
 .u-section-7 .u-text-9 {
   font-size: 1.25rem;
-  margin: 21px 11px 0;
+  margin: 21px 21px 0;
 }
 
 .u-section-7 .u-btn-3 {
@@ -2313,7 +2340,7 @@
 
 .u-section-9 .u-text-3 {
   font-size: 1.25rem;
-  margin: 21px 11px 0;
+  margin: 21px 21px 0;
 }
 
 .u-section-9 .u-btn-1 {
@@ -2354,7 +2381,7 @@
 
 .u-section-9 .u-text-6 {
   font-size: 1.25rem;
-  margin: 21px 11px 0;
+  margin: 21px 21px 0;
 }
 
 .u-section-9 .u-btn-2 {
@@ -2395,7 +2422,7 @@
 
 .u-section-9 .u-text-9 {
   font-size: 1.25rem;
-  margin: 21px 11px 0;
+  margin: 21px 21px 0;
 }
 
 .u-section-9 .u-btn-3 {
